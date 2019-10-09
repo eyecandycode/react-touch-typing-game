@@ -1,10 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 
-//TODO
-//:: break up render into components
-//:: number saying how many words completed?
-// css wes bos highlight?
-
 function App() {
   const textInputRef = useRef(null);
 
@@ -80,7 +75,6 @@ function App() {
   const handleButtonClick = () => {
     setSentencesComplete(sentencesComplete + 1);
     setStarted(true);
-    // textInputRef.current.focus();
     setStartTime(new Date() - startTime);
     setInterval(tick, 1000);
   };
